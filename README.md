@@ -66,7 +66,7 @@ https://vulnerable-site.com
 ```
 Run the Python script:
 
-    python Advanced_ws.py
+    python3 Advanced_ws.py
 
 The script will start scanning the endpoints and log the results into corresponding files.
 
