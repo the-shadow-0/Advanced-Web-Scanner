@@ -53,29 +53,30 @@ The script uses a set of payloads for different vulnerability types:
 
 ## How to Run
 
-    Ensure Tor is running on your system. You can start Tor with the following command (assuming Tor is installed):
+Ensure Tor is running on your system. You can start Tor with the following command (assuming Tor is installed):
+
 ```bash
 sudo systemctl start tor
 ```
 
 Make sure you have the endpoints.txt file with a list of endpoints you want to scan. Each endpoint should be on a new line:
-
+```txt
 http://example.com
 https://vulnerable-site.com
-
+```
 Run the Python script:
 
     python Advanced_ws.py
 
-    The script will start scanning the endpoints and log the results into corresponding files.
+The script will start scanning the endpoints and log the results into corresponding files.
 
 Example Output
 
 If the script finds any vulnerabilities, they will be logged in the following format:
-
+```txt
 [Vulnerability Type] Vulnerable: http://example.com?page=1' OR '1'='1' --
 Curl: curl -X GET 'http://example.com?page=1%27%20OR%20%271%27%3D%271' --data ''
-
+```
 The results will be saved in the following files:
 
     res_sqli.txt for SQLi vulnerabilities
@@ -89,7 +90,7 @@ To avoid detection, the script automatically renews the Tor circuit after every 
 
 ## License
 
-This script is provided as-is with no warranty. Feel free to use and modify it according to your needs. For educational purposes only. Ensure you have explicit permission before testing any website for vulnerabilities.
+This script is provided as-is with no warranty under MIT license. Feel free to use and modify it according to your needs. For educational purposes only. Ensure you have explicit permission before testing any website for vulnerabilities.
 
 ## Disclaimer
 
